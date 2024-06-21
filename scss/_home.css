@@ -61,6 +61,10 @@
   animation-delay: 2.2s;
 }
 
-.home .anim-holder {
+.home .anim-holder1 {
   width: 350px;
+}
+
+.home .anim-holder2 {
+  width: 1150px;
 }
