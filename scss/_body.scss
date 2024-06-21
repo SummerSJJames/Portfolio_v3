@@ -59,6 +59,9 @@ header{
     a:hover{
         @include underline(5px, 1);
     }
+    .active{
+        @include underline(4px, 1);
+    }
 }
 
 .title{

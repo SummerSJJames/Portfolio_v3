@@ -52,6 +52,19 @@ header {
   transform: translate(-50%);
   transition: all 0.5s ease-out;
 }
+.navigators .active:after {
+  width: 90%;
+  margin-top: 0px;
+  content: " ";
+  position: absolute;
+  display: block;
+  background: #4A42BD;
+  height: 4px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.5s ease-out;
+}
 
 .title {
   display: flex;
