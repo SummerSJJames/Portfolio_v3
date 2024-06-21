@@ -1,7 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+* {
+  margin: 0;
+}
+
 body {
-  font-family: "Monomaniac One", sans-serif;
-  font-weight: 400;
+  font-family: "JetBrains Mono", monospace;
   color: #F6EBFF;
   background-color: #35334E;
 }
+
+header {
+  padding: 0px;
+  margin: 0;
+  height: 95px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #3e3b64, #2C2C39, #2C2C39, #3e3b64);
+}
+
+.border {
+  height: 2.5px;
+  background-color: #22222c;
+}
+
+.navigators {
+  padding-right: 35px;
+}
+.navigators a {
+  font-family: "JetBrains Mono", monospace;
+  color: #F6EBFF;
+  font-size: 23px;
+  font-weight: 600;
+  padding: 0px 15px;
+  text-decoration: none;
+  position: relative;
+}
+.navigators a:hover:after {
+  width: 90%;
+  margin-top: 0px;
+  content: " ";
+  position: absolute;
+  display: block;
+  background: #4A42BD;
+  height: 5px;
+  border-radius: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.5s ease-out;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+}
+.title h1 {
+  font-size: 40px;
+  margin: -8px;
+}
+.title h3 {
+  font-size: 15px;
+  color: #A093A9;
+}/*# sourceMappingURL=main.css.map */
