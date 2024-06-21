@@ -7,6 +7,9 @@ body {
   font-family: "JetBrains Mono", monospace;
   color: #F6EBFF;
   background-color: #35334E;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
 header {
@@ -63,4 +66,74 @@ header {
 .title h3 {
   font-size: 15px;
   color: #A093A9;
+}
+
+#bubble {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(111, 106, 182, 0.5019607843);
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+    border-right: 0.15em solid #5952d4;
+  }
+  to {
+    width: 100%;
+    border-right: 0.15em solid #5952d4;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #5952d4;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.home {
+  justify-content: center;
+  height: 100%;
+  padding-top: 15%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.home h1 {
+  font-size: 125px;
+}
+.home h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1.75s steps(60, end) forwards, blink-caret 0.75s step-end infinite;
+  animation-delay: 2.2s;
+}
+.home .anim-holder {
+  width: 350px;
 }/*# sourceMappingURL=main.css.map */
