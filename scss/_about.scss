@@ -1,0 +1,87 @@
+
+.about{
+    padding-top: 100px;
+}
+
+.intro{
+    display: flex;
+    justify-content: left;
+
+    h2{
+        width: 700px;
+        padding-left: 170px;
+        padding-top: 150px;
+    }
+}
+
+.me{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: fit-content;
+    margin-left: 75px;
+    margin-top: 50px;
+
+    img{
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.hobbies{
+    margin-top: 400px;
+    padding-left: 60px;
+    align-items: center;
+    h2{
+        line-height: 0px;
+        margin-left: 27px;
+        padding-top: 50px;
+    }
+}
+
+.pics{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: -25px;
+    margin-top: 75px;
+    .col{
+     display: flex;
+     flex-direction: column;
+    }
+    .fif{
+        width: 900px;
+    }
+    img{
+        width: 800px;
+        border-radius: 20px;
+        margin-bottom: 25px;
+        margin-right: 25px;
+    }
+}
+
+@keyframes fade{
+    0%, 20%, 80%, 100% {opacity: 0;}
+    50% {opacity: 1;}
+}
+
+#loading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    max-width: 100%;
+    max-width: 91%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.dot{
+    width: 30px;
+    height: 30px;
+    background-color: $colour_light;
+    opacity: 0;
+    animation: fade 2s linear infinite;
+}

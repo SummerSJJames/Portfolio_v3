@@ -39,12 +39,19 @@ function drawCircleOnCanvas(size) {
 // Function to generate random circles
 function generateCircles(numCircles) {
     const container = document.getElementById('bubble');
+
+    const bodyHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    );
+
     const circles = [];
 
     for (let i = 0; i < numCircles; i++) {
         const size = getRandom(30, 300); // Circle size between 30px and 300px
-        const top = getRandom(0, window.innerHeight - size);
-        const left = getRandom(0, window.innerWidth - size);
+        const top = getRandom(0, bodyHeight - size);
+        const left = getRandom(0, document.body.clientWidth - size);
         const imgSrc = drawCircleOnCanvas(size);
 
         const circle = createCircle(i, size, top, left, imgSrc);
@@ -75,5 +82,8 @@ function loadCircles() {
     }
 }
 
-// Load circles when the page loads
-window.onload = loadCircles;
+document.addEventListener('DOMContentLoaded', loadCircles);
+
+window.addEventListener('resize', function() {
+    generateCircles(30); 
+});
